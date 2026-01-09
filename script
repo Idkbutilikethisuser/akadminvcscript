@@ -1,0 +1,12 @@
+local UserInputService = game:GetService("UserInputService")
+
+UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+    if gameProcessedEvent then return end  
+    
+    if input.KeyCode == Enum.KeyCode.R then  
+        wait(2)
+        game:GetService("VoiceChatService"):leaveVoice()
+        wait(0.5)
+        game:GetService("VoiceChatService"):joinVoice()
+    end
+end)
