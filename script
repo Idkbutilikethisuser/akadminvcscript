@@ -1,9 +1,9 @@
 local UserInputService = game:GetService("UserInputService")
 
 UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-    if gameProcessedEvent then return end  -- Ignore if input is processed by the game (e.g., typing in chat)
+    if gameProcessedEvent then return end
     
-    if input.KeyCode == Enum.KeyCode.R then 
+    if input.KeyCode == Enum.KeyCode.E then
         wait(2)
         game:GetService("VoiceChatService"):leaveVoice()
         wait(0.5)
